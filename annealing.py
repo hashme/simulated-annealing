@@ -138,7 +138,8 @@ def score_solution(solution):
  selection = solution_selection(solution)
  return score_selection(selection)
 
-energy = score_selection
+def energy_f(selection):
+ return score_selection(selection)
 
 def random_selection():
  selection = []
@@ -173,7 +174,7 @@ def probability_f(energy_s, energy_n, T):
   return T
  return math.exp((energy_s - energy_n)/T)
 
-def anneal(max_k = 1000, temperature = temperature_exp(), probability = probability_f, distance = distance_f, selection = None):
+def anneal(max_k = 1000, temperature = temperature_exp(), probability = probability_f, distance = distance_f, energy = energy_f, selection = None):
  last_time = 0
  if selection is None:
   selection = random_selection()
