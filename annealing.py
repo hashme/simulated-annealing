@@ -5,6 +5,18 @@ import math
 import random
 import copy
 
+'''
+Problem description:
+
+In the matrix of 1s and 0s below, rows represent patients and columns represent drugs.
+Every patient is allergic to ten drugs, and not allergic to eleven drugs. (represented by 0 and 1 respectively in the matrix below)
+We are conducting a study where each patient is assigned five drugs out of the eleven that they're not allergic to.
+We are studying how pairs of drugs interact with each other.
+The interaction of a pair of drugs can be observed if a single patient is taking both the drugs in that pair.
+We want to maximize the number of drug pair interactions observed in our study with these constraints.
+
+'''
+
 s = '''{0, 0, 1, 0, 1, 1, 0, 0, 1, 0, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 0},
 
 {0, 0, 0, 1, 1, 1, 1, 1, 0, 1, 0, 1, 0, 0, 1, 0, 0, 1, 1, 1, 0}, 
